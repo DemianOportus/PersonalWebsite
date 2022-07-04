@@ -10,7 +10,6 @@ export const Contact = () => {
   const form = useRef();
   const sendEmail = (e) => {
     e.preventDefault();
-
     emailjs
       .sendForm(
         "service_emwsaki",
@@ -26,8 +25,6 @@ export const Contact = () => {
           console.log(error.text);
         }
       );
-
-    Redirect();
   };
 
   function Redirect() {
@@ -74,6 +71,7 @@ export const Contact = () => {
             variant="contained"
             type="submit"
             value="Send"
+            onClick={Redirect}
           >
             Send Message
           </Button>
