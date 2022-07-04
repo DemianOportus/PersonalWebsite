@@ -5,9 +5,6 @@ import { Contact } from "./pages/contact";
 import Navbar from "./components/navbar";
 import Success from "./pages/success";
 import Portfolio from "./pages/portfolio";
-import entries from "./components/entryinfo";
-import Entry from "./components/entry";
-import { Grid } from "@mui/material";
 
 function App() {
   return (
