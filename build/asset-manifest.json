@@ -1,0 +1,17 @@
+{
+  "main.js": "/demian/static/js/main.a331f592.chunk.js",
+  "main.js.map": "/demian/static/js/main.a331f592.chunk.js.map",
+  "runtime~main.js": "/demian/static/js/runtime~main.5133c14d.js",
+  "runtime~main.js.map": "/demian/static/js/runtime~main.5133c14d.js.map",
+  "static/js/2.3822c59e.chunk.js": "/demian/static/js/2.3822c59e.chunk.js",
+  "static/js/2.3822c59e.chunk.js.map": "/demian/static/js/2.3822c59e.chunk.js.map",
+  "index.html": "/demian/index.html",
+  "precache-manifest.4ff66a9aef2433cbc0c9d16d2306a5d6.js": "/demian/precache-manifest.4ff66a9aef2433cbc0c9d16d2306a5d6.js",
+  "service-worker.js": "/demian/service-worker.js",
+  "static/media/DiceGame.png": "/demian/static/media/DiceGame.0db2d6d8.png",
+  "static/media/SequenceGame.png": "/demian/static/media/SequenceGame.08f09655.png",
+  "static/media/e-selection.png": "/demian/static/media/e-selection.7b0a2d1d.png",
+  "static/media/jQuery.png": "/demian/static/media/jQuery.0633096d.png",
+  "static/media/personalWebsite.png": "/demian/static/media/personalWebsite.a1ab78d5.png",
+  "static/media/profile.png": "/demian/static/media/profile.d5730783.png"
+}
