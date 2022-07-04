@@ -1,4 +1,1 @@
-# myWebsite
-# demian
-# mySuperWebsite
 # mySuperWebsite
