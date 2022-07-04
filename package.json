@@ -1,6 +1,5 @@
 {
   "name": "myPersonalWebsite",
-  "homepage": "https://demianoportus.github.io/demian",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
