@@ -1,15 +1,19 @@
-import { Button, Grid } from "@mui/material";
+import { Button, Grid, AlertTitle, Alert, Container } from "@mui/material";
 import React, { useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
+import { textAlign } from "@mui/system";
 
 export const Contact = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [question, setQuestion] = useState("");
+  const [missingFields, setMissingFields] = useState(false);
 
   const form = useRef();
   const sendEmail = (e) => {
     e.preventDefault();
+    //Checks to send email
+    if (missingFields) return;
     emailjs
       .sendForm(
         "service_emwsaki",
@@ -20,6 +24,7 @@ export const Contact = () => {
       .then(
         (result) => {
           console.log(result.text);
+          window.location.replace("/success");
         },
         (error) => {
           console.log(error.text);
@@ -27,56 +32,65 @@ export const Contact = () => {
       );
   };
 
-  function Redirect() {
-    if (name !== "" && email !== "" && question !== "") {
-      window.location.replace("/success");
+  function CheckBoolean() {
+    if (name === "" || email === "" || question === "") {
+      setMissingFields(true);
     } else {
-      alert("Please fill out missing field");
+      setMissingFields(false);
     }
   }
-
   return (
-    <Grid id="contactPage">
+    <Container maxWidth="sm" id="contactPage">
       <h1>Have some questions?</h1>
+
       <form ref={form} onSubmit={sendEmail}>
-        <Grid>
-          <input
-            onChange={(e) => setName(e.target.value)}
-            className="contactInput"
-            type="text"
-            placeholder="Your name"
-            name="name"
-          ></input>
-        </Grid>
-        <Grid>
-          <input
-            onChange={(e) => setEmail(e.target.value)}
-            className="contactInput"
-            type="email"
-            placeholder="What's your email?"
-            name="user_email"
-          ></input>
-        </Grid>
-        <Grid>
-          <textarea
-            onChange={(e) => setQuestion(e.target.value)}
-            id="questionBox"
-            placeholder="Your questions..."
-            name="message"
-          ></textarea>
-        </Grid>
-        <Grid>
-          <Button
-            id="sendButton"
-            variant="contained"
-            type="submit"
-            value="Send"
-            onClick={Redirect}
-          >
-            Send Message
-          </Button>
+        <Grid container spacing={3}>
+          <Grid item xs={12}>
+            <input
+              onChange={(e) => setName(e.target.value)}
+              className="contactInput"
+              type="text"
+              placeholder="Your name"
+              name="name"
+            ></input>
+          </Grid>
+          <Grid item xs={12}>
+            <input
+              onChange={(e) => setEmail(e.target.value)}
+              className="contactInput"
+              type="email"
+              placeholder="What's your email?"
+              name="user_email"
+            ></input>
+          </Grid>
+          <Grid item xs={12}>
+            <textarea
+              onChange={(e) => setQuestion(e.target.value)}
+              id="questionBox"
+              placeholder="Your questions..."
+              name="message"
+            ></textarea>
+          </Grid>
+          <Grid item xs={12}>
+            {/* Conditional rendering only if client missingFields */}
+            {missingFields && (
+              <Alert sx={{ width: "100%", textAlign: "left" }} severity="error">
+                <AlertTitle>Error</AlertTitle>
+                This is an error alert — <strong>Missing fields!</strong>
+              </Alert>
+            )}
+            <Button
+              id="sendButton"
+              variant="contained"
+              type="submit"
+              value="Send"
+              onClick={CheckBoolean}
+            >
+              Send Message
+            </Button>
+          </Grid>
         </Grid>
       </form>
-    </Grid>
+    </Container>
   );
 };
