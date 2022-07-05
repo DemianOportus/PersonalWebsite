@@ -3,10 +3,6 @@
   transform: scale(1.1);
 }
 
-* {
-  box-sizing: border-box;
-}
-
 /* Title section */
 #pinkSection {
   background-color: #d5eaeb;
@@ -410,7 +406,8 @@ a:link {
 }
 
 #questionBox {
-  width: 100%;
+  width: 395px;
+  margin-top: 20px;
   font-family: "Montserrat";
   height: 100px;
   border-radius: 15px;
@@ -420,7 +417,8 @@ a:link {
 
 .contactInput {
   padding: 7px;
-  width: 100%;
+  width: 400px;
+  margin-top: 20px;
   font-family: "Montserrat";
   border-radius: 15px;
   border: 1px solid gray;
@@ -428,7 +426,7 @@ a:link {
 
 #sendButton {
   margin-top: 10px;
-  width: 100%;
+  width: 415px;
   border-radius: 15px;
   padding: 7px;
   font-family: "Montserrat";
