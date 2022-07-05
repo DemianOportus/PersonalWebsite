@@ -482,3 +482,7 @@ a:link {
 #succesHomeButton:visited {
   color: white;
 }
+
+#projectImage:hover {
+  transform: scale(1.01);
+}
