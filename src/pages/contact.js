@@ -1,7 +1,6 @@
 import { Button, Grid, AlertTitle, Alert, Container } from "@mui/material";
 import React, { useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
-import { textAlign } from "@mui/system";
 
 export const Contact = () => {
   const [name, setName] = useState("");

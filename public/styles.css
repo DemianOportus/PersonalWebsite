@@ -23,6 +23,44 @@
   vertical-align: bottom;
 }
 
+@media (min-width: 800px) and (min-height: 1000px) {
+  #profileBlock {
+    display: inline-block;
+    width: 100% !important;
+    text-align: center;
+    margin: 40px 0px !important;
+  }
+
+  #titleBlock {
+    display: inline-block;
+    width: 100% !important;
+    text-align: center;
+  }
+
+  #titleMainBlock {
+    padding: 0 5% !important;
+    margin-bottom: 150px !important;
+  }
+
+  #profile {
+    width: 50vh !important;
+  }
+
+  #contactButton {
+    width: 230px;
+    height: 70px;
+    font-size: 2vh;
+  }
+
+  #pinkSection {
+    background-color: white;
+  }
+
+  #navbar {
+    background-color: #d5eaeb !important;
+  }
+}
+
 #greeting {
   font-family: "Montserrat";
   font-size: 2.3vh;
