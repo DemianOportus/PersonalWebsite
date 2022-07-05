@@ -486,3 +486,14 @@ a:link {
 #projectImage:hover {
   transform: scale(1.01);
 }
+/* Fixing font size when in phone */
+@media (max-width: 570px) {
+  #portfolioTitle {
+    font-size: 3vh !important;
+  }
+
+  #portfolioDescription {
+    font-size: 2.3vh !important;
+    padding: 1vh 0 !important;
+  }
+}
