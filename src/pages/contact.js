@@ -7,6 +7,8 @@ export const Contact = () => {
   const [email, setEmail] = useState("");
   const [question, setQuestion] = useState("");
   const [missingFields, setMissingFields] = useState(false);
+  const [missingFieldIs, setMissingFieldIs] = useState("");
+  const [successfulFields, SetSuccessfulFields] = useState(false);
 
   const form = useRef();
   const sendEmail = (e) => {
@@ -32,16 +34,37 @@ export const Contact = () => {
   };
 
   function CheckBoolean() {
-    if (name === "" || email === "" || question === "") {
+    const missing = [];
+    // Check conditions
+    if (name === "") {
+      missing.push("name");
+    }
+    if (email === "") {
+      missing.push("email");
+    } else if (!email.includes("@")) {
+      missing.push("email");
+    } else if (!email.includes(".")) {
+      missing.push("email");
+    }
+    if (question === "") {
+      missing.push("question");
+    }
+    // END OF Check conditions
+
+    // Check Boolean
+    if (missing.length > 0) {
+      setMissingFieldIs(missing.join(", "));
+      SetSuccessfulFields(false);
       setMissingFields(true);
     } else {
+      SetSuccessfulFields(true);
       setMissingFields(false);
     }
+    // END OF Check Boolean
   }
   return (
     <Container maxWidth="sm" id="contactPage">
       <h1>Have some questions?</h1>
-
       <form ref={form} onSubmit={sendEmail}>
         <Grid container spacing={3}>
           <Grid item xs={12}>
@@ -51,6 +74,7 @@ export const Contact = () => {
               type="text"
               placeholder="Your name"
               name="name"
+              required
             ></input>
           </Grid>
           <Grid item xs={12}>
@@ -60,6 +84,7 @@ export const Contact = () => {
               type="email"
               placeholder="What's your email?"
               name="user_email"
+              required
             ></input>
           </Grid>
           <Grid item xs={12}>
@@ -68,6 +93,7 @@ export const Contact = () => {
               id="questionBox"
               placeholder="Your questions..."
               name="message"
+              required
             ></textarea>
           </Grid>
           <Grid item xs={12}>
@@ -75,7 +101,17 @@ export const Contact = () => {
             {missingFields && (
               <Alert sx={{ width: "100%", textAlign: "left" }} severity="error">
                 <AlertTitle>Error</AlertTitle>
-                This is an error alert — <strong>Missing fields!</strong>
+                Oops! You are missing the following fields:{" "}
+                <strong>{missingFieldIs}</strong>
+              </Alert>
+            )}
+            {successfulFields && (
+              <Alert
+                sx={{ width: "100%", textAlign: "left", mb: 2 }}
+                severity="success"
+              >
+                <AlertTitle>Success</AlertTitle>
+                Congratulations! The message was successfully sent!
               </Alert>
             )}
             <Button
