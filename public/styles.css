@@ -3,10 +3,6 @@
   transform: scale(1.1);
 }
 
-* {
-  box-sizing: border-box;
-}
-
 /* Title section */
 #pinkSection {
   background-color: #d5eaeb;
@@ -21,44 +17,6 @@
 #profile {
   width: 85vh;
   vertical-align: bottom;
-}
-
-@media (min-width: 800px) and (min-height: 1000px) {
-  #profileBlock {
-    display: inline-block;
-    width: 100% !important;
-    text-align: center;
-    margin: 40px 0px !important;
-  }
-
-  #titleBlock {
-    display: inline-block;
-    width: 100% !important;
-    text-align: center;
-  }
-
-  #titleMainBlock {
-    padding: 0 5% !important;
-    margin-bottom: 150px !important;
-  }
-
-  #profile {
-    width: 50vh !important;
-  }
-
-  #contactButton {
-    width: 230px;
-    height: 70px;
-    font-size: 2vh;
-  }
-
-  #pinkSection {
-    background-color: white;
-  }
-
-  #navbar {
-    background-color: #d5eaeb !important;
-  }
 }
 
 #greeting {
@@ -448,7 +406,8 @@ a:link {
 }
 
 #questionBox {
-  width: 100%;
+  width: 395px;
+  margin-top: 20px;
   font-family: "Montserrat";
   height: 100px;
   border-radius: 15px;
@@ -458,7 +417,8 @@ a:link {
 
 .contactInput {
   padding: 7px;
-  width: 100%;
+  width: 400px;
+  margin-top: 20px;
   font-family: "Montserrat";
   border-radius: 15px;
   border: 1px solid gray;
@@ -466,7 +426,7 @@ a:link {
 
 #sendButton {
   margin-top: 10px;
-  width: 100%;
+  width: 415px;
   border-radius: 15px;
   padding: 7px;
   font-family: "Montserrat";
@@ -481,19 +441,4 @@ a:link {
 
 #succesHomeButton:visited {
   color: white;
-}
-
-#projectImage:hover {
-  transform: scale(1.01);
-}
-/* Fixing font size when in phone */
-@media (max-width: 570px) {
-  #portfolioTitle {
-    font-size: 3vh !important;
-  }
-
-  #portfolioDescription {
-    font-size: 2.3vh !important;
-    padding: 1vh 0 !important;
-  }
 }
