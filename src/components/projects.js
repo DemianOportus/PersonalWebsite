@@ -19,9 +19,9 @@ const Projects = [
     img: Eselection,
     title: "E-Selection",
     description:
-      "Website offering different services, such as landscaping, housecleaning, etc. Implemented a Database to create Users and log-in. Created using ReactJS",
-    sourceCode: "https://github.com/DemianOportus/e-selection",
-    playCode: "https://e-selection.herokuapp.com/",
+      "Website offering different services, such as landscaping, housecleaning, etc.  Created using ReactJS with a team of Software developers",
+    sourceCode: "https://github.com/DemianOportus/eselect",
+    playCode: "https://eselect-9074a.web.app/",
   },
   {
     id: 3,

@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
-import { Typography, Grid } from "@mui/material";
+import { Grid } from "@mui/material";
 
 import Projects from "../components/projects";
 import Project from "../components/project";
