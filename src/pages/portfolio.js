@@ -12,7 +12,9 @@ function Portfolio() {
       <Navbar />
 
       <Grid item>
-        <h1 className="subtitle">Portfolio</h1>
+        <h1 style={{ fontFamily: "Suisse" }} className="subtitle">
+          Portfolio
+        </h1>
         <hr
           style={{
             width: "100px",

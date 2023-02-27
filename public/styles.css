@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "Suisse";
+  src: url(fonts/SuisseEDUIntl-Black.otf) format("opentype");
+}
+
 /* Navbar */
 .navLink:hover {
   transform: scale(1.1);
